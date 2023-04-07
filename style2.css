@@ -20,22 +20,31 @@ html {
     background-size: cover;
      background-position: center;
     background-attachment: fixed;
-    z-index: -1;
+    /* nu mai este necesar */
+    /* z-index: -1; */
 }
 
 .navbar{
+    margin-left: 58vw;
     width: 95%;
-    margin: auto;
     padding: 35px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+/*de incercat
     
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    transition: all 0.2s ease-in-out;
+    z-index: 1; */
 }
+
 .logo{
-    width: 150px;
+    width: 125px;
     cursor: pointer;
-    margin-left: 110px;
+    margin-right: 10px;
 
 
 }
@@ -170,29 +179,42 @@ html {
     opacity: 0;
 }
 h3 {
-    position: absolute;
+    /* Am sters "position: absolute" si "z-index: 1" ca sa nu se mai suprapuna titlul cu imaginea */
+    /* position: absolute; */
+    /* z-index: 1; */
     bottom: 50;
     right: 70;
     color: #fff;
-    z-index: 1;
-  }
-  
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
+    }
+
+    /* Am adaugat o culoare optionala,
+    pentru toate elementele h3 din toate containere-le care au clasa "pizza-item",
+    deoarece initial era scris alb pe fundal alb. Schimb-o cu ce crezi ca se potriveste. */
+    .pizza-item h3 {
+        color: #913911;
+    }
+    
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
 
 /*footer*/
-.spacer {
+/* Am sters spacer-ul deoarece nu mai este necesar,
+"navbar", "Pizza", si <footer> fiind in acelasi container. ("banner") */
+/* .spacer {
     height: 100vh;
-}
+} */
 footer {
-    position: absolute;
-    bottom: 0;
+    /* problema principala: "position: absolute" si "bottom: 0"
+    faceau footer-ul sa fie in partea de jos a ferestrei (ecranul vizibil initial)
+    */
+    /* position: absolute; */
+    /* bottom: 0; */
     width: 100%;
     background-color: #333;
     color: #fff;
@@ -243,19 +265,75 @@ a {
 a:hover {
     text-decoration: underline;
   }
+/* Rubrigile elementelor*/
+#pizza {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0;
+    color: white;
+}
+#paste {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0;
+    color: white;
+}
+#burgeri {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0;
+    color: white;
+}
+#salate{
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0;
+    color: white;
+}
 /*pentru pizza*/
+
 .Pizza {
-    height: auto;
-    position: absolute;
-    margin-top: 1000px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* "height" nu este necesar in acest caz.
+    Nu aduce nici o modificare. */
+    /* height: auto; */
+
+    /* "position: absolute" este de eviat in cazul unei grid.
+    Daca vrei sa fie centrata, folosesti margin-left si margin-right auto. Dar doar daca ai o latime fixa a grilei.
+    */
+    /* position: absolute; */
+
+    /* margin-top nu mai este necesar,
+    dar l-am schimbat din 1000px in 13px
+    pentru ca rezultatul final sa arate identic cu ce ai facut initial.
+    */
+    margin-top: 13px;
+    /* Am adaugat 40px astfel incat footer-ul sa nu fie lipit de grid. */
+    margin-bottom: 40px;
+
+    /* Din moment ce pozitia nu mai este absoluta,
+    top si left nu mai aduc schimbari. */
+    /* top: 50%; */
+    /* left: 50%; */
+
+    /* Am centrat grila cu "margin-left: auto", "margin-right: auto" si "width: 1070px". */
+    /* Este de preferat sa se foloseasca "vw" in loc de "px" pentru "width" in cazul acestei grile. */
+    /* Deoarece ai pus un element "pizza-item" cu fundal alb in fiecare celula a grilei
+    in loc sa pui fundalul alb al intregei celule si apoi sa pui doar textul si imaginea in celula,
+    daca ai fi folosit "vw" atunci ar fi aparut un spatiu gol suplimentar in dreapta fiecarei pizza-item.
+    O solutie ar fi fost sa folosesti "justify-content: space-evenly/around/between" in loc de "gap: 40px",
+    dar am inteles ca a fost o idee de design. :D */
+    margin-left: auto;
+    margin-right: auto;
+    width: 1070px;
+
+    /* "transform: translate" este de evitat in general.
+    Dar poate fi o solutie in cazuri de urgenta. */
+    /* transform: translate(-50%, -50%); */
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 40px;
-
 }
   
 .pizza-item {
@@ -334,4 +412,159 @@ a:hover {
     transition: all 0.2s ease-in-out;
 }
 
+/* Paste*/
+.Paste {
+    margin-top: 13px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1070px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 40px;
+}
+.paste-item {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    width: 300px;
+    height: 350px;
+      
+}
+.paste-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.pizza-image:hover{
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+h3 {
+    bottom: 50;
+    right: 70;
+    color: #fff;
+    }
+
+.paste-item h3 {
+    color: #913911;
+ }
+    
+a {
+    color: inherit;
+    text-decoration: none;
+}
+    
+a:hover {
+    text-decoration: underline;
+}
+/* Burgeri*/
+.Burgeri {
+    margin-top: 13px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1070px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+}
+.burgeri-item {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    width: 300px;
+    height: 350px;
+      
+}
+.burgeri-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.burgeri-item:nth-child(4) {
+    grid-column: 2 / span 1; /* a doua coloana */
+    grid-row: 1 / span 1; /* primul rand */
+}
+.burgeri-image:hover{
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+h3 {
+    bottom: 50;
+    right: 70;
+    color: #fff;
+    }
+
+.burgeri-item h3 {
+    color: #913911;
+ }
+    
+a {
+    color: inherit;
+    text-decoration: none;
+}
+    
+a:hover {
+    text-decoration: underline;
+}
+/*Salate*/
+.Salate {
+    margin-top: 13px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1070px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 40px;
+}
+.salate-item {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    width: 300px;
+    height: 350px;
+      
+}
+.salate-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.salate-item:nth-child(4) {
+    grid-column: 2 / span 1; /* a doua coloana */
+    grid-row: 1 / span 1; /* primul rand */
+}
   
+.salate-image:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+h3 {
+    bottom: 50;
+    right: 70;
+    color: #fff;
+    }
+
+.salate-item h3 {
+    color: #913911;
+ }
+    
+a {
+    color: inherit;
+    text-decoration: none;
+}
+    
+a:hover {
+    text-decoration: underline;
+}
