@@ -55,5 +55,9 @@ $(document).ready(function() {
     showSlides();
 });
 
-/* pentru poze+descriere*/
-
+/* bine ati venit*/
+window.onload = function() {
+	setTimeout(function() {
+		document.getElementById("welcome").style.display = "block";
+	}, 500); 
+};

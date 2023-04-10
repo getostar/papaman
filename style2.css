@@ -25,34 +25,29 @@ html {
 }
 
 .navbar{
-    margin-left: 58vw;
-    width: 95%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    margin-bottom: 1000px;
+    background-image: url(oferta.jpg);
+    background-size: cover;
+    width: 100%;
     padding: 35px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-/*de incercat
-    
-    position: fixed;
-    top: 0;
-    left: 0;
-    
-    transition: all 0.2s ease-in-out;
-    z-index: 1; */
+}
+.navbar ul{
+    margin-left: auto;
 }
 
-.logo{
-    width: 125px;
-    cursor: pointer;
-    margin-right: 10px;
-
-
-}
 .navbar ul li{
     list-style: none;
     display: inline-block;
     margin: 0 20px;
     position: relative;
+    
 }
 .navbar ul li a {
     text-decoration: none;
@@ -71,6 +66,9 @@ html {
 }
 .navbar ul li:hover::after{
     width: 100%;
+}
+div{
+    padding-top: 82px;
 }
 
 /* Style for pop-up contact */
@@ -140,44 +138,7 @@ html {
   cursor: pointer;
 }
 
-/* imagini schimbatoare*/
-.slideshow-wrapper {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    overflow: hidden;
-    margin-right: 200px;
-    margin-left: 900px;
-}
 
-.slideshow-container {
-    width: 100%;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-}
-
-.slideshow img {
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    margin-top: 250px;
-    margin-left: 500px;
-
-    transition: opacity 1s ease-in-out;
-}
-
-.slideshow img.active {
-    opacity: 1;
-}
-
-.slideshow img.last-active {
-    opacity: 0;
-}
 h3 {
     /* Am sters "position: absolute" si "z-index: 1" ca sa nu se mai suprapuna titlul cu imaginea */
     /* position: absolute; */
@@ -218,12 +179,12 @@ footer {
     width: 100%;
     background-color: #333;
     color: #fff;
-    padding: 50px 0;
+    padding: 30px 0;
     text-align: center;
 }
   
   
-  .container {
+.container {
     position:relative;
 }
   
@@ -265,6 +226,7 @@ a {
 a:hover {
     text-decoration: underline;
   }
+
 /* Rubrigile elementelor*/
 #pizza {
     text-align: center;

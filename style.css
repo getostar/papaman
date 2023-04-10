@@ -1,56 +1,72 @@
 *{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+    min-height: 100%;
+    background-image: url("background.png");
+    background-attachment: fixed;
+}
+html {
+    height: auto;
+    display: block;
     margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+    padding: 0;    
 }
-.banner{
-    width: 100%;
-    height: 100vh;
-    background-image: url(background.png);
+  
+
+.banner {
     background-size: cover;
-    background-position: center;
+     background-position: center;
+    background-attachment: fixed;
+    /* nu mai este necesar */
+    /* z-index: -1; */
 }
+
 .navbar{
-    width: 95%;
-    margin: auto;
-    padding: 35px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
+  position: fixed;
+  top: 0;
+  left: 0; 
+  z-index: 9999;
+  margin-bottom: 1000px;
+  background-image: url(oferta.jpg);
+  background-size: cover;
+  width: 100%;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.logo{
-    width: 200px;
-    cursor: pointer;
-    margin-left: 110px;
-
-
+.navbar ul{
+  margin-left: auto;
 }
+
 .navbar ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+  
 }
 .navbar ul li a {
-    text-decoration: none;
-    color: black;
-    text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
 }
 .navbar ul li::after{
-    content:'';
-    height: 3px;
-    width: 0;
-    background: #009688;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
+  content:'';
+  height: 3px;
+  width: 0;
+  background: #009688;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
 }
 .navbar ul li:hover::after{
-    width: 100%;
+  width: 100%;
 }
-
 /* Style for pop-up contact */
 .popup {
     position: fixed;
@@ -118,6 +134,45 @@
   cursor: pointer;
 }
 
+/*welcome*/
+#welcome {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+	font-size: 36px;
+	color: #333;
+	opacity: 0;
+	animation-name: fade-in;
+	animation-duration: 0.5s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+h2{
+  color: gold;
+  font-size: 70px;
+  margin-bottom: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h6{
+  color: silver;
+  font-size: 30px;
+  margin-left: 220px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+@keyframes fade-in {
+	from {
+		opacity: 0;
+		transform: translate(-50%, -60%);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+}
+
 /* imagini schimbatoare*/
 .slideshow-wrapper {
     position: relative;
@@ -175,53 +230,58 @@ h3 {
 
 /*footer*/
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 50px 0;
-    text-align: center;
-  }
-  
+  /* problema principala: "position: absolute" si "bottom: 0"
+  faceau footer-ul sa fie in partea de jos a ferestrei (ecranul vizibil initial)
+  */
+  /* position: absolute; */
+  /* bottom: 0; */
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
+  position:relative;
+}
+
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .col-md-6 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .drepturi{
-    text-align: center;
-    margin: auto;
+  text-align: center;
+  margin: auto;
 }
 h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
-  
+
 p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
-  
+
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-  
+
 a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
-  
+
 a:hover {
-    text-decoration: underline;
-  }
-  
+  text-decoration: underline;
+}
