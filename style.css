@@ -5,7 +5,7 @@
 }
 body {
     min-height: 100%;
-    background-image: url("background.png");
+    background-image: url("background.jpg");
     background-attachment: fixed;
 }
 html {
@@ -18,7 +18,7 @@ html {
 
 .banner {
     background-size: cover;
-     background-position: center;
+    background-position: center;
     background-attachment: fixed;
     /* nu mai este necesar */
     /* z-index: -1; */
@@ -139,7 +139,6 @@ html {
 	position: absolute;
 	top: 30%;
 	left: 50%;
-
 	transform: translate(-50%, -50%);
 	font-size: 36px;
 	color: #333;
@@ -150,14 +149,14 @@ html {
 	animation-fill-mode: forwards;
 }
 h2{
-  color: gold;
-  font-size: 70px;
+  color: black;
+  font-size: 65px;
   margin-bottom: 20px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h6{
-  color: silver;
+  color: black;
   font-size: 30px;
   margin-left: 220px;
   font-family:Arial, Helvetica, sans-serif;
@@ -173,62 +172,9 @@ h6{
 	}
 }
 
-/* imagini schimbatoare*/
-.slideshow-wrapper {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    overflow: hidden;
-    margin-right: 200px;
-    margin-left: 900px;
-}
-
-.slideshow-container {
-    width: 100%;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-}
-
-.slideshow img {
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    margin-top: 250px;
-    margin-left: 500px;
-
-    transition: opacity 1s ease-in-out;
-}
-
-.slideshow img.active {
-    opacity: 1;
-}
-
-.slideshow img.last-active {
-    opacity: 0;
-}
-h3 {
-    position: absolute;
-    bottom: 50;
-    right: 70;
-    color: #fff;
-    z-index: 1;
-  }
-  
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
 
 /*footer*/
+
 footer {
   /* problema principala: "position: absolute" si "bottom: 0"
   faceau footer-ul sa fie in partea de jos a ferestrei (ecranul vizibil initial)
@@ -240,6 +186,7 @@ footer {
   color: #fff;
   padding: 30px 0;
   text-align: center;
+  margin-top: 75%;
 }
 
 
@@ -267,10 +214,6 @@ h3 {
   margin-bottom: 20px;
 }
 
-p {
-  margin-bottom: 10px;
-}
-
 ul {
   list-style: none;
   margin: 0;
@@ -285,3 +228,80 @@ a {
 a:hover {
   text-decoration: underline;
 }
+/*mijloc*/
+#mijloc {
+  animation-name: fade-in;
+	animation-duration: 0.7s;
+	animation-delay: 0.7s;
+	animation-fill-mode: forwards;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.7); 
+  padding: 10px;
+  border: 5px solid #ccc;
+  text-align: center;
+  font-size: 24px;
+  color: black;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mijloc,h8{
+  font-size: 40px;
+  color: crimson;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.mijloc, p{
+  margin-top: 20px;
+  font-size: 30px;
+  color: red;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#locatie,
+#meniu {
+  background-color:purple;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+#locatie{
+  margin-right: 100px;
+  border-radius: 20px;
+}
+#meniu{
+  margin-left: 100px;
+  border-radius: 20px;
+}
+
+#locatie:hover,
+#meniu:hover {
+  background-color: blue;
+}
+
+#locatie:focus,
+#meniu:focus {
+  outline: none;
+}
+/* galerie*/
+.poze {
+  margin-top: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.poze img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  object-fit: cover;
+}
+

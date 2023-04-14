@@ -61,3 +61,9 @@ window.onload = function() {
 		document.getElementById("welcome").style.display = "block";
 	}, 500); 
 };
+/*mijloc*/
+window.onload=function() {
+  setTimeout(function() {
+    document.getElementById("mijloc").style.display= "block";
+  }, 700);
+};
