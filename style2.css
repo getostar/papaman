@@ -5,7 +5,7 @@
 }
 body {
     min-height: 100%;
-    background-image: url("background.png");
+    background-image: url("poze/background.png");
     background-attachment: fixed;
 }
 html {
@@ -30,7 +30,7 @@ html {
     left: 0;
     z-index: 9999;
     margin-bottom: 1000px;
-    background-image: url(oferta.jpg);
+    background-image: url(poze/oferta.jpg);
     background-size: cover;
     width: 100%;
     padding: 35px 0;
@@ -112,7 +112,7 @@ div{
     background-color: #fff;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-    background-image: url(Livrare-pizza.jpg);
+    background-image: url(/poze/Livrare-pizza.jpg);
     background-size: cover;
     font-size: 2.5em;
 }
@@ -299,7 +299,7 @@ a:hover {
 }
   
 .pizza-item {
-    background-color: #f2f2f2;
+    background-color: red;
     text-align: center;
     padding: 15px;
     font-size: 20px;
@@ -307,11 +307,15 @@ a:hover {
     height: 350px;
       
 }
-.pizza-image {
+.pizza-item img {
+    transition: transform 0.3s ease-in-out;
     width: 100%;
     height: 200px;
     background-size: cover;
     background-position: center;
+}
+.pizza-item img:hover{
+    transform: scale(1.2);
 }
 .pizza-item:nth-child(4) {
     grid-column: 2 / span 1; /* a doua coloana */
@@ -387,7 +391,7 @@ a:hover {
     gap: 40px;
 }
 .paste-item {
-    background-color: #f2f2f2;
+    background-color: yellow;
     text-align: center;
     padding: 15px;
     font-size: 20px;
@@ -395,15 +399,16 @@ a:hover {
     height: 350px;
       
 }
-.paste-image {
+.paste-item img {
+    transition: transform 0.3s ease-in-out;
     width: 100%;
     height: 200px;
     background-size: cover;
     background-position: center;
 }
-.pizza-image:hover{
-    transform: scale(1.1);
-    transition: all 0.2s ease-in-out;
+
+.paste-item img:hover{
+    transform: scale(1.2);
 }
 h3 {
     bottom: 50;
@@ -436,7 +441,7 @@ a:hover {
     gap: 40px;
 }
 .burgeri-item {
-    background-color: #f2f2f2;
+    background-color: blue;
     text-align: center;
     padding: 15px;
     font-size: 20px;
@@ -444,11 +449,15 @@ a:hover {
     height: 350px;
       
 }
-.burgeri-image {
+.burgeri-item img {
+    transition: transform 0.3s ease-in-out;
     width: 100%;
     height: 200px;
     background-size: cover;
     background-position: center;
+}
+.burgeri-item img:hover{
+    transform: scale(1.2);
 }
 .burgeri-item:nth-child(4) {
     grid-column: 2 / span 1; /* a doua coloana */
@@ -489,7 +498,7 @@ a:hover {
     gap: 40px;
 }
 .salate-item {
-    background-color: #f2f2f2;
+    background-color: yellowgreen;
     text-align: center;
     padding: 15px;
     font-size: 20px;
@@ -497,11 +506,15 @@ a:hover {
     height: 350px;
       
 }
-.salate-image {
+.salate-item img {
+    transition: transform 0.3s ease-in-out;
     width: 100%;
     height: 200px;
     background-size: cover;
     background-position: center;
+}
+.salate-item img:hover{
+    transform: scale(1.2);
 }
 .salate-item:nth-child(4) {
     grid-column: 2 / span 1; /* a doua coloana */
