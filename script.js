@@ -30,30 +30,6 @@ $(document).ready(function() {
       overlay.hide();
     });
   });
-  /*pentru imagini*/
-  $(document).ready(function() {
-    var slideIndex = 0;
-    var slides = document.getElementsByClassName("slideshow-wrapper")[0].getElementsByTagName("img");
-    
-    function showSlides() {
-      for (var i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("active");
-        slides[i].classList.remove("last-active");
-      }
-    
-      slideIndex++;
-      if (slideIndex >= slides.length) {
-        slideIndex = 0;
-      }
-    
-      slides[slideIndex].classList.add("active");
-      slides[slideIndex == 0 ? slides.length - 1 : slideIndex - 1].classList.add("last-active");
-    
-      setTimeout(showSlides, 5000);
-    }
-    
-    showSlides();
-});
 
 /* bine ati venit*/
 window.onload = function() {
@@ -67,3 +43,49 @@ window.onload=function() {
     document.getElementById("mijloc").style.display= "block";
   }, 700);
 };
+/*harta*/
+function harta() {
+  var url = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2853.6816270077493!2d25.940913612315057!3d44.3370469078128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40adffaf66c51bdb%3A0xe5d3219eabc28619!2sPAPA%20MAN!5e0!3m2!1sro!2sro!4v1681741277217!5m2!1sro!2sro";
+  window.open(url, "_blank");
+}
+/*50cm*/
+
+function Pizza50cm() {
+  var pizza = document.querySelector(".Pizza");
+  var pizza50 = document.querySelector(".pizza50");
+
+  pizza.classList.add("hidden"); 
+  pizza50.classList.remove("hidden");
+}
+
+function Pizza32cm() {
+  var pizza = document.querySelector(".Pizza");
+  var pizza50 = document.querySelector(".pizza50");
+
+  pizza.classList.remove("hidden");
+  pizza50.classList.add("hidden");
+}
+
+
+window.addEventListener('load', function() {
+  var overlay = document.getElementById('overlaypizza50');
+  var popup = document.getElementById('pizza50popup');
+  var popupImage = document.querySelector('#pizza50popup img');
+
+  // Asculta evenimentul de clic pe imagine pentru a inchide pop-up-ul
+  popup.addEventListener('click', function(e) {
+    if (e.target === popup || e.target === popupImage) {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+    }
+  });
+
+  // Afiseaza pop-up-ul dupa o intarziere de 2 secunde
+  setTimeout(function() {
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+  }, 1500);
+});
+
+
+

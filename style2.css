@@ -5,7 +5,7 @@
 }
 body {
     min-height: 100%;
-    background-image: url("poze/background.png");
+    background-image: url("poze/background.jpg");
     background-attachment: fixed;
 }
 html {
@@ -30,7 +30,7 @@ html {
     left: 0;
     z-index: 9999;
     margin-bottom: 1000px;
-    background-image: url(poze/oferta.jpg);
+    background-color: burlywood;
     background-size: cover;
     width: 100%;
     padding: 35px 0;
@@ -103,21 +103,18 @@ div{
 
 .popup {
 
-    width: 400px;
-    height: 300px;
+    width: 800px;
+    height: 600px;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     background-color: #fff;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-    background-image: url(/poze/Livrare-pizza.jpg);
     background-size: cover;
-    font-size: 2.5em;
 }
 .popup {
-    background-color: #ffffff;
+    background-color: brown;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
 .overlay {
@@ -129,6 +126,56 @@ div{
     background-color: rgba(0,0,0,0.5);
     z-index: 9998;
 }
+.popup img{
+    padding-top: 0;
+    padding-left: 0;
+    width: 500px;
+    height: 600px;
+
+}
+.popupdreapta{
+    margin-left: 14%;
+    background-color: brown;
+    display: grid;
+    max-width: 10000%;
+    max-width: 1000%;
+  
+}
+.popupdreapta h2 {
+    font-family: MV Boli;
+    position: relative;
+    top: 50%;
+    left: 10%;
+    font-size: 200%;
+    
+}
+.popupdreapta numar1 {
+    position: relative;
+    padding-top: 10%;
+    top: 50%;
+    left: 30%;
+    font-size: x-large;
+}
+.popupdreapta zone1{
+    margin-top: 10%;
+    font-family: MV Boli;
+    font-size: 120%;
+
+}
+.popupdreapta numar2{
+    position: relative;
+    padding-top: 15%;
+    top: 50%;
+    left: 30%;
+    font-size: x-large;
+
+}
+.popupdreapta zone2{
+    margin-top: 10%;
+    font-family: MV Boli;
+    font-size: 120%;
+}
+
 .popup-close {
   position: absolute;
   top: 10px;
@@ -137,45 +184,15 @@ div{
   color: #333333;
   cursor: pointer;
 }
+.popupdreapta {
+    position: fixed;
+    padding-top: 0;
+    top: 0;
+    left: 50%;    
+}
 
 
-h3 {
-    /* Am sters "position: absolute" si "z-index: 1" ca sa nu se mai suprapuna titlul cu imaginea */
-    /* position: absolute; */
-    /* z-index: 1; */
-    bottom: 50;
-    right: 70;
-    color: #fff;
-    }
-
-    /* Am adaugat o culoare optionala,
-    pentru toate elementele h3 din toate containere-le care au clasa "pizza-item",
-    deoarece initial era scris alb pe fundal alb. Schimb-o cu ce crezi ca se potriveste. */
-    .pizza-item h3 {
-        color: #913911;
-    }
-    
-    a {
-        color: inherit;
-        text-decoration: none;
-    }
-    
-    a:hover {
-        text-decoration: underline;
-    }
-
-/*footer*/
-/* Am sters spacer-ul deoarece nu mai este necesar,
-"navbar", "Pizza", si <footer> fiind in acelasi container. ("banner") */
-/* .spacer {
-    height: 100vh;
-} */
 footer {
-    /* problema principala: "position: absolute" si "bottom: 0"
-    faceau footer-ul sa fie in partea de jos a ferestrei (ecranul vizibil initial)
-    */
-    /* position: absolute; */
-    /* bottom: 0; */
     width: 100%;
     background-color: #333;
     color: #fff;
@@ -230,83 +247,83 @@ a:hover {
 /* Rubrigile elementelor*/
 #pizza {
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
     margin-top: 0;
-    color: white;
+    color: darkblue;
+    font-family: MV Boli;
+}
+
+#pizza50 {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 0;
+    color: darkblue;
+    font-family: MV Boli;
 }
 #paste {
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
     margin-top: 0;
-    color: white;
+    color: darkblue;
+    font-family: MV Boli;
 }
 #burgeri {
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
     margin-top: 0;
-    color: white;
+    color: darkblue;
+    font-family: MV Boli;
 }
 #salate{
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
     margin-top: 0;
-    color: white;
+    color: darkblue;
+    font-family: MV Boli;
+}
+#deserturi{
+    text-align: center;
+    font-size: 3em;
+    margin-top: 0;
+    color: darkblue;
+    font-family: MV Boli;
+}
+#bauturi{
+    text-align: center;
+    font-size: 3em;
+    margin-top: 0;
+    color: darkblue;
+    font-family: MV Boli;
 }
 /*pentru pizza*/
 
 .Pizza {
-    /* "height" nu este necesar in acest caz.
-    Nu aduce nici o modificare. */
-    /* height: auto; */
-
-    /* "position: absolute" este de eviat in cazul unei grid.
-    Daca vrei sa fie centrata, folosesti margin-left si margin-right auto. Dar doar daca ai o latime fixa a grilei.
-    */
-    /* position: absolute; */
-
-    /* margin-top nu mai este necesar,
-    dar l-am schimbat din 1000px in 13px
-    pentru ca rezultatul final sa arate identic cu ce ai facut initial.
-    */
     margin-top: 13px;
-    /* Am adaugat 40px astfel incat footer-ul sa nu fie lipit de grid. */
     margin-bottom: 40px;
-
-    /* Din moment ce pozitia nu mai este absoluta,
-    top si left nu mai aduc schimbari. */
-    /* top: 50%; */
-    /* left: 50%; */
-
-    /* Am centrat grila cu "margin-left: auto", "margin-right: auto" si "width: 1070px". */
-    /* Este de preferat sa se foloseasca "vw" in loc de "px" pentru "width" in cazul acestei grile. */
-    /* Deoarece ai pus un element "pizza-item" cu fundal alb in fiecare celula a grilei
-    in loc sa pui fundalul alb al intregei celule si apoi sa pui doar textul si imaginea in celula,
-    daca ai fi folosit "vw" atunci ar fi aparut un spatiu gol suplimentar in dreapta fiecarei pizza-item.
-    O solutie ar fi fost sa folosesti "justify-content: space-evenly/around/between" in loc de "gap: 40px",
-    dar am inteles ca a fost o idee de design. :D */
     margin-left: auto;
     margin-right: auto;
     width: 1070px;
-
-    /* "transform: translate" este de evitat in general.
-    Dar poate fi o solutie in cazuri de urgenta. */
-    /* transform: translate(-50%, -50%); */
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 40px;
+    min-height: 350px;
 }
   
 .pizza-item {
-    background-color: red;
+    background-color: brown;
     text-align: center;
     padding: 15px;
     font-size: 20px;
     width: 300px;
     height: 350px;
+    min-height: 350px;
       
 }
+.pizza-item h3 {
+    color: black;
+    font-family: segoe script;
+ }
 .pizza-item img {
     transition: transform 0.3s ease-in-out;
     width: 100%;
@@ -378,6 +395,125 @@ a:hover {
     transition: all 0.2s ease-in-out;
 }
 
+/*Pizza Mare*/   
+.buton50{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 5px; 
+}
+.buton-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 0;
+  }
+.pizza50{
+    padding-top: 0%;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1070px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 40px;
+}
+.pizza50-item {
+    display: grid;
+    background-color: brown;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    width: 300px;
+    min-height: 350px;
+  
+}
+.pizza50-item h3 {
+    color: black;
+    font-family: MV Boli;
+ }
+.hidden{
+    display: none;
+}
+.pizza50-item img {
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.pizza50-item img:hover{
+    transform: scale(1.2);
+}
+.pizza50-item:nth-child(4) {
+    grid-column: 2 / span 1; /* a doua coloana */
+    grid-row: 1 / span 1; /* primul rand */
+}
+  
+.pizza50-item:nth-child(5) {
+    grid-column: 3 / span 1; /* a treia coloana */
+    grid-row: 1 / span 1; /* primul rand */
+}
+  
+.pizza50-item:nth-child(6) {
+    grid-column: 1 / span 1; /* prima coloana */
+    grid-row: 2 / span 1; /* al doilea rand */
+}
+  
+.pizza50-item:nth-child(7) {
+    grid-column: 2 / span 1; /* a doua coloana */
+    grid-row: 2 / span 1; /* al doilea rand */
+}
+  
+.pizza50-item:nth-child(8) {
+    grid-column: 3 / span 1; /* a treia coloana */
+    grid-row: 2 / span 1; /* al doilea rand */
+}
+  
+.pizza50-item:nth-child(9) {
+    grid-column: 1 / span 1; /* prima coloana */
+    grid-row: 3 / span 1; /* al treilea rand */
+}
+.pizza50-item:nth-child(10) {
+    grid-column: 2 / span 1; /* a doua coloana */
+    grid-row: 3 / span 1; /* al treilea rand */
+}
+.pizza50-item:nth-child(11) {
+    grid-column: 3 / span 1; /* a treia coloana */
+    grid-row: 3 / span 1; /* al treilea rand */
+}
+
+.pizza50-item:nth-child(12) {
+    grid-column: 1 / span 1; /* prima coloana */
+    grid-row: 4 / span 1; /* al patrulea rand */
+}
+.pizza50-item:nth-child(13) {
+    grid-column: 2 / span 1; /* a doua coloană */
+    grid-row: 4 / span 1; /* a patra linie */
+    }
+    
+    .pizza50-item:nth-child(14) {
+    grid-column: 3 / span 1; /* a treia coloană*/
+    grid-row: 4 / span 1; /* a patra linie */
+    }
+    
+    .pizza50-item:nth-child(15) {
+    grid-column: 1 / span 1; /* prima coloană */
+    grid-row: 5 / span 1; /* a cincea linie */
+    }
+.pizza50-image:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
 /* Paste*/
 .Paste {
     margin-top: 13px;
@@ -391,7 +527,7 @@ a:hover {
     gap: 40px;
 }
 .paste-item {
-    background-color: yellow;
+    background-color: brown;
     text-align: center;
     padding: 15px;
     font-size: 20px;
@@ -417,7 +553,8 @@ h3 {
     }
 
 .paste-item h3 {
-    color: #913911;
+    color: black;
+    font-family: MV Boli;
  }
     
 a {
@@ -441,7 +578,7 @@ a:hover {
     gap: 40px;
 }
 .burgeri-item {
-    background-color: blue;
+    background-color: brown;
     text-align: center;
     padding: 15px;
     font-size: 20px;
@@ -474,7 +611,8 @@ h3 {
     }
 
 .burgeri-item h3 {
-    color: #913911;
+    color: black;
+    font-family: MV Boli;
  }
     
 a {
@@ -494,11 +632,11 @@ a:hover {
     width: 1070px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 40px;
 }
 .salate-item {
-    background-color: yellowgreen;
+    background-color: brown;
     text-align: center;
     padding: 15px;
     font-size: 20px;
@@ -532,7 +670,126 @@ h3 {
     }
 
 .salate-item h3 {
-    color: #913911;
+    color: black;
+    font-family: MV Boli;
+ }
+    
+a {
+    color: inherit;
+    text-decoration: none;
+}
+    
+a:hover {
+    text-decoration: underline;
+}
+/*Deserturi*/
+.Deserturi {
+    margin-top: 13px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1070px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+}
+.deserturi-item {
+    background-color: brown;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    width: 300px;
+    height: 350px;
+      
+}
+.deserturi-item img {
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.deserturi-item img:hover{
+    transform: scale(1.2);
+}
+.deserturi-item:nth-child(4) {
+    grid-column: 2 / span 1; /* a doua coloana */
+    grid-row: 1 / span 1; /* primul rand */
+}
+  
+.deserturi-image:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+h3 {
+    bottom: 50;
+    right: 70;
+    color: #fff;
+    }
+
+.deserturi-item h3 {
+    color: black;
+    font-family: MV Boli;
+ }
+    
+a {
+    color: inherit;
+    text-decoration: none;
+}
+    
+a:hover {
+    text-decoration: underline;
+}
+/*Bauturi*/
+.Bauturi {
+    margin-top: 13px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1070px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 40px;
+}
+.bauturi-item {
+    background-color: brown;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    width: 300px;
+    height: 350px;
+      
+}
+.bauturi-item img {
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.bauturi-item img:hover{
+    transform: scale(1.2);
+}
+.bauturi-item:nth-child(4) {
+    grid-column: 2 / span 1; /* a doua coloana */
+    grid-row: 1 / span 1; /* primul rand */
+}
+  
+.bauturi-image:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+h3 {
+    bottom: 50;
+    right: 70;
+    color: #fff;
+    }
+
+.bauturi-item h3 {
+    color: black;
+    font-family: MV Boli;
  }
     
 a {

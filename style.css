@@ -7,6 +7,7 @@ body {
   min-height: 100%;
   background-image: url("poze/background.jpg");
   background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 html {
     height: auto;
@@ -29,7 +30,7 @@ html {
   top: 0;
   left: 0; 
   z-index: 9999;
-  background-image: url(poze/oferta.jpg);
+  background-color: burlywood;
   background-size: cover;
   width: 100%;
   padding: 35px 0;
@@ -66,72 +67,130 @@ html {
 .navbar ul li:hover::after{
   width: 100%;
 }
+.navbar img {
+  width: 5%;
+  margin-left: 200px;
+}
 /* Style for pop-up contact */
 .popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-    z-index: 9999;
-    display: none;
-    
-  }
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  z-index: 9999;
+  display: none;
   
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 9998;
-    display: none;
-  }
-  /*popup*/
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 9998;
+  display: none;
+}
+/*popup*/
 .popup,
 .overlay {
-  display:none;
+display:none;
 }
 
 .popup {
 
-    width: 400px;
-    height: 300px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-    background-image: url(poze/Livrare-pizza.jpg);
-    background-size: cover;
-    font-size: 2.5em;
+  width: 800px;
+  height: 600px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  background-size: cover;
 }
 .popup {
-    background-color: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
+  background-color: brown;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 9998;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 9998;
 }
+.popup img{
+  padding-top: 0;
+  padding-left: 0;
+  width: 500px;
+  height: 600px;
+
+}
+.popupdreapta{
+  margin-left: 14%;
+  background-color: brown;
+  display: grid;
+  max-width: 10000%;
+  max-width: 1000%;
+
+}
+.popupdreapta h2 {
+  font-family: MV Boli;
+  position: relative;
+  top: 50%;
+  left: 10%;
+  font-size: 200%
+  
+}
+.popupdreapta numar1 {
+  position: relative;
+  padding-top: 10%;
+  top: 50%;
+  left: 30%;
+  font-size: x-large;
+}
+.popupdreapta zone1{
+  margin-top: 10%;
+  font-family: MV Boli;
+  font-size: large;
+
+}
+.popupdreapta numar2{
+  position: relative;
+  padding-top: 15%;
+  top: 50%;
+  left: 30%;
+  font-size: x-large;
+
+}
+.popupdreapta zone2{
+  margin-top: 10%;
+  font-family: MV Boli;
+  font-size: large;
+}
+
 .popup-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
-  color: #333333;
-  cursor: pointer;
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 20px;
+color: #333333;
+cursor: pointer;
 }
+.popupdreapta {
+  position: fixed;
+  padding-top: 0;
+  top: 0;
+  left: 50%;    
+}
+
 
 /*welcome*/
 #welcome {
@@ -151,14 +210,14 @@ h2{
   color: black;
   font-size: 65px;
   margin-bottom: 20px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:MV Boli;
 }
 
 h6{
   color: black;
   font-size: 30px;
   margin-left: 220px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:MV Boli;
 }
 @keyframes fade-in {
 	from {
@@ -225,6 +284,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
+p10 img{
+  width: 70%;
+  height: auto;
+}
 /*mijloc*/
 #mijloc {
   animation-name: fade-in;
@@ -244,17 +307,21 @@ a:hover {
   top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
+  position: relative;
 }
 .mijloc,h8{
   font-size: 40px;
   color: crimson;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family:cursive
 }
 .mijloc, p{
   margin-top: 20px;
   font-size: 30px;
   color: red;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:cursive
+}
+.mijloc,img{
+  height: 25%;
 }
 #locatie,
 #meniu {
@@ -267,11 +334,12 @@ a:hover {
   transition: all 1s ease;
 }
 #locatie{
-  margin-right: 100px;
+  margin-top: 20px;
+  margin-right: 20px;
   border-radius: 20px;
 }
 #meniu{
-  margin-left: 100px;
+  margin-left: 20px;
   border-radius: 20px;
 }
 
@@ -302,3 +370,47 @@ a:hover {
   object-fit: cover;
 }
 
+
+/* pizza50popup */
+#pizza50popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 400px;
+  background-color: white;
+  z-index: 9999;
+  display: none;
+  transition: opacity 1.5s ease-in-out;
+}
+
+
+#pizza50popup img {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: block;
+  transition: opacity 1.5s ease-in-out;
+}
+#overlaypizza50 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+  display: none;
+  transition: opacity 1.5s ease-in-out;
+}
+
+
+.scrispopup{
+  text-align: center;
+  width: 100%;
+  background-color:red;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
