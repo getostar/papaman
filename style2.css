@@ -159,7 +159,7 @@ div{
 .popupdreapta zone1{
     margin-top: 10%;
     font-family: MV Boli;
-    font-size: 120%;
+    color: darkgreen;
 
 }
 .popupdreapta numar2{
@@ -173,7 +173,12 @@ div{
 .popupdreapta zone2{
     margin-top: 10%;
     font-family: MV Boli;
-    font-size: 120%;
+    color: darkgreen;
+}
+.popupdreapta img{
+  width: 15%;
+  height: 100%;
+  position: absolute;
 }
 
 .popup-close {
@@ -189,6 +194,14 @@ div{
     padding-top: 0;
     top: 0;
     left: 50%;    
+}
+.pozadelivery img {
+  width: 38%;
+  height: 35%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
 }
 
 
@@ -322,7 +335,7 @@ a:hover {
 }
 .pizza-item h3 {
     color: black;
-    font-family: segoe script;
+    font-family: MV Boli;
  }
 .pizza-item img {
     transition: transform 0.3s ease-in-out;
@@ -407,7 +420,8 @@ a:hover {
     font-size: 16px;
     margin: 4px;
     cursor: pointer;
-    border-radius: 5px; 
+    border-radius: 50%;
+
 }
 .buton-container {
     display: flex;
@@ -444,6 +458,7 @@ a:hover {
 .hidden{
     display: none;
 }
+
 .pizza50-item img {
     transition: transform 0.3s ease-in-out;
     width: 100%;

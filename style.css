@@ -5,7 +5,7 @@
 }
 body {
   min-height: 100%;
-  background-image: url("poze/background.jpg");
+  background-image: url("poze/background2.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
@@ -21,8 +21,6 @@ html {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    /* nu mai este necesar */
-    /* z-index: -1; */
 }
 
 .navbar{
@@ -138,7 +136,6 @@ display:none;
   background-color: brown;
   display: grid;
   max-width: 10000%;
-  max-width: 1000%;
 
 }
 .popupdreapta h2 {
@@ -146,7 +143,7 @@ display:none;
   position: relative;
   top: 50%;
   left: 10%;
-  font-size: 200%
+  font-size: 200%;
   
 }
 .popupdreapta numar1 {
@@ -160,6 +157,7 @@ display:none;
   margin-top: 10%;
   font-family: MV Boli;
   font-size: large;
+  color: darkgreen;
 
 }
 .popupdreapta numar2{
@@ -174,6 +172,12 @@ display:none;
   margin-top: 10%;
   font-family: MV Boli;
   font-size: large;
+  color: darkgreen;
+}
+.popupdreapta img{
+  width: 15%;
+  height: 100%;
+  position: absolute;
 }
 
 .popup-close {
@@ -190,7 +194,14 @@ cursor: pointer;
   top: 0;
   left: 50%;    
 }
+.pozadelivery img {
+  width: 38%;
+  height: 35%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 
+}
 
 /*welcome*/
 #welcome {
@@ -206,8 +217,9 @@ cursor: pointer;
 	animation-delay: 0.5s;
 	animation-fill-mode: forwards;
 }
-h2{
+h5{
   color: black;
+  -webkit-text-stroke: 1px red;
   font-size: 65px;
   margin-bottom: 20px;
   font-family:MV Boli;
@@ -215,6 +227,7 @@ h2{
 
 h6{
   color: black;
+  -webkit-text-stroke: 1px red;
   font-size: 30px;
   margin-left: 220px;
   font-family:MV Boli;
@@ -312,12 +325,14 @@ p10 img{
 .mijloc,h8{
   font-size: 40px;
   color: crimson;
+  -webkit-text-stroke: 1px darkgreen;
   font-family:cursive
 }
 .mijloc, p{
   margin-top: 20px;
   font-size: 30px;
   color: red;
+  -webkit-text-stroke: 1px darkgreen;
   font-family:cursive
 }
 .mijloc,img{
