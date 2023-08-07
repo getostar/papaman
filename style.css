@@ -69,6 +69,93 @@ html {
   width: 5%;
   margin-left: 200px;
 }
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: #444;
+    position: absolute;
+    top: 70px;
+    right: 20px; /* Ajustați valoarea pentru poziționare */
+    width: 200px;
+    padding: 10px;
+    transform-origin: top right; /* Adăugați această linie pentru a schimba originea transformării */
+    transform: scaleY(0); /* Începe ascuns */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+
+  .menu.active {
+    transform: scaleY(1); /* Afișează meniul atunci când este activ */
+  }
+}
+
+/* Stilurile pentru butonul "hamburger" */
+.hamburger {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+  position: absolute;
+  top: 50%;
+  right: 20px; /* Ajustați valoarea pentru poziționare */
+  transform: translateY(-50%);
+}
+
+.hamburger.active {
+  background-color: transparent;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  transition: 0.4s;
+}
+
+.hamburger::before {
+  transform: translateY(-10px);
+}
+
+.hamburger::after {
+  transform: translateY(10px);
+}
+
+.hamburger.active::before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active::after {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 /* Style for pop-up contact */
 .popup {
   position: fixed;
@@ -217,6 +304,12 @@ cursor: pointer;
 	animation-delay: 0.5s;
 	animation-fill-mode: forwards;
 }
+@media (max-width:) {
+  #welcome {
+    font-size: 2000px; /* Ajustează dimensiunea textului pentru dispozitive mobile */
+    margin-left: 100px; /* Mutați la dreapta cu 10px pe dispozitive mobile */
+  }
+}
 h5{
   color: black;
   -webkit-text-stroke: 1px red;
@@ -242,6 +335,45 @@ h6{
 		transform: translate(-50%, -50%);
 	}
 }
+
+/*carousel*/
+.slider-container {
+  position: absolute;
+  bottom: 35vh;
+  width: 525px; /* Înălțimea și lățimea fixă a containerului */
+  height: 500px;
+  overflow: hidden;
+  border-radius: 50%; /* Margini rotunde pentru întregul container */
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-slide {
+  flex: 0 0 100%;
+}
+
+.slider-slide img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 1200px) {
+  .slider-container {
+    font-size: 10px; 
+    margin-left: 0; 
+    margin-bottom: 800px;
+  }
+  .slider-slide img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 100%;
+    }
+}
+
+
+
 
 
 /*footer*/

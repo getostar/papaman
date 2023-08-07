@@ -5,7 +5,7 @@
 }
 body {
     min-height: 100%;
-    background-image: url("poze/background.jpg");
+    background-image: url("poze/background2.jpg");
     background-attachment: fixed;
 }
 html {
@@ -29,7 +29,7 @@ html {
     top: 0;
     left: 0;
     z-index: 9999;
-    margin-bottom: 1000px;
+    margin-bottom: 20px;
     background-color: burlywood;
     background-size: cover;
     width: 100%;
@@ -37,6 +37,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 .navbar ul{
     margin-left: auto;
@@ -67,9 +68,93 @@ html {
 .navbar ul li:hover::after{
     width: 100%;
 }
-div{
-    padding-top: 82px;
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+.hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
 }
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+  
+@media (max-width: 1200px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      background-color: #444;
+      position: absolute;
+      top: 70px;
+      right: 20px; /* Ajustați valoarea pentru poziționare */
+      width: 200px;
+      padding: 10px;
+      transform-origin: top right; /* Adăugați această linie pentru a schimba originea transformării */
+      transform: scaleY(0); /* Începe ascuns */
+      transition: transform 0.3s ease-in-out;
+    }
+    
+  
+    .menu.active {
+      transform: scaleY(1); /* Afișează meniul atunci când este activ */
+    }
+  }
+  
+  /* Stilurile pentru butonul "hamburger" */
+  .hamburger {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+    position: absolute;
+    top: 50%;
+    right: 20px; /* Ajustați valoarea pentru poziționare */
+    transform: translateY(-50%);
+  }
+  
+  .hamburger.active {
+    background-color: transparent;
+  }
+  
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    transition: 0.4s;
+  }
+  
+  .hamburger::before {
+    transform: translateY(-10px);
+  }
+  
+  .hamburger::after {
+    transform: translateY(10px);
+  }
+  
+  .hamburger.active::before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.active::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
 
 /* Style for pop-up contact */
 .popup {
@@ -211,101 +296,116 @@ footer {
     color: #fff;
     padding: 30px 0;
     text-align: center;
-}
+  }
   
   
-.container {
+.container{
     position:relative;
-}
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   
-.row {   
+.row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
+  }
   
-.col-md-6 {
+  .col-md-6 {
+    font-size: small;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-.drepturi{
+  }
+  .drepturi{
     text-align: center;
     margin: auto;
-}
-h3 {
+  }
+  h3 {
     font-size: 24px;
     margin-bottom: 20px;
-}
+  }
   
-p {
-    margin-bottom: 10px;
-}
-  
-ul {
+  ul {
     list-style: none;
     margin: 0;
     padding: 0;
-}
+  }
   
-a {
+  a {
     color: #fff;
     text-decoration: none;
-}
+  }
   
-a:hover {
+  a:hover {
     text-decoration: underline;
+  }
+  p10 img{
+    width: 70%;
+    height: auto;
   }
 
 /* Rubrigile elementelor*/
 #pizza {
     text-align: center;
     font-size: 3em;
-    margin-top: 0;
-    color: darkblue;
+    margin-top: 150px;
+    color: goldenrod;
     font-family: MV Boli;
 }
+:target {
+    padding-top: 80px;
+  }
 
 #pizza50 {
     text-align: center;
     font-size: 3em;
     margin-top: 0;
-    color: darkblue;
+    color: goldenrod;
     font-family: MV Boli;
 }
 #paste {
     text-align: center;
     font-size: 3em;
     margin-top: 0;
-    color: darkblue;
+    color: goldenrod;
     font-family: MV Boli;
 }
 #burgeri {
     text-align: center;
     font-size: 3em;
     margin-top: 0;
-    color: darkblue;
+    color: goldenrod;
     font-family: MV Boli;
 }
+#shaorma {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 0;
+    color: goldenrod;
+    font-family: MV Boli;
+}
+
 #salate{
     text-align: center;
     font-size: 3em;
     margin-top: 0;
-    color: darkblue;
+    color: goldenrod;
     font-family: MV Boli;
 }
 #deserturi{
     text-align: center;
     font-size: 3em;
     margin-top: 0;
-    color: darkblue;
+    color: goldenrod;
     font-family: MV Boli;
 }
 #bauturi{
     text-align: center;
     font-size: 3em;
     margin-top: 0;
-    color: darkblue;
+    color: goldenrod;
     font-family: MV Boli;
 }
 /*pentru pizza*/
@@ -324,7 +424,7 @@ a:hover {
 }
   
 .pizza-item {
-    background-color: brown;
+    background-color: silver;
     text-align: center;
     padding: 15px;
     font-size: 20px;
@@ -336,6 +436,15 @@ a:hover {
 .pizza-item h3 {
     color: black;
     font-family: MV Boli;
+    
+ }
+ .pizza-item p{
+    background-color: white;
+
+ }
+ .pizza-item pr{
+    float: right;
+
  }
 .pizza-item img {
     transition: transform 0.3s ease-in-out;
@@ -443,7 +552,7 @@ a:hover {
 }
 .pizza50-item {
     display: grid;
-    background-color: brown;
+    background-color: silver;
     text-align: center;
     padding: 15px;
     font-size: 20px;
@@ -542,7 +651,7 @@ a:hover {
     gap: 40px;
 }
 .paste-item {
-    background-color: brown;
+    background-color: silver;
     text-align: center;
     padding: 15px;
     font-size: 20px;
@@ -593,7 +702,7 @@ a:hover {
     gap: 40px;
 }
 .burgeri-item {
-    background-color: brown;
+    background-color: silver;
     text-align: center;
     padding: 15px;
     font-size: 20px;
@@ -638,6 +747,58 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/*Shaorma*/
+.Shaorma {
+    margin-top: 13px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1070px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 40px;
+}
+.shaorma-item {
+    background-color: silver;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    width: 300px;
+    height: 350px;
+      
+}
+.shaorma-item img {
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.shaorma-item img:hover{
+    transform: scale(1.2);
+}
+h3 {
+    bottom: 50;
+    right: 70;
+    color: #fff;
+    }
+
+.shaorma-item h3 {
+    color: black;
+    font-family: MV Boli;
+ }
+    
+a {
+    color: inherit;
+    text-decoration: none;
+}
+    
+a:hover {
+    text-decoration: underline;
+}
 /*Salate*/
 .Salate {
     margin-top: 13px;
@@ -651,7 +812,7 @@ a:hover {
     gap: 40px;
 }
 .salate-item {
-    background-color: brown;
+    background-color: silver;
     text-align: center;
     padding: 15px;
     font-size: 20px;
@@ -710,7 +871,7 @@ a:hover {
     gap: 40px;
 }
 .deserturi-item {
-    background-color: brown;
+    background-color: silver;
     text-align: center;
     padding: 15px;
     font-size: 20px;
@@ -769,7 +930,7 @@ a:hover {
     gap: 40px;
 }
 .bauturi-item {
-    background-color: brown;
+    background-color: silver;
     text-align: center;
     padding: 15px;
     font-size: 20px;

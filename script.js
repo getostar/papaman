@@ -88,4 +88,41 @@ window.addEventListener('load', function() {
 });
 
 
+// Imagini//
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slider-slide');
+let currentSlide = 0;
+let startX;
 
+function showSlide(index) {
+  slider.style.transform = `translateX(-${index * 100}%)`;
+  currentSlide = index;
+}
+
+function nextSlide() {
+  const nextIndex = (currentSlide + 1) % slides.length;
+  showSlide(nextIndex);
+}
+
+slider.addEventListener('mousedown', (e) => {
+  startX = e.clientX;
+});
+
+slider.addEventListener('mouseup', (e) => {
+  const endX = e.clientX;
+  if (startX - endX > 50) {
+    nextSlide();
+  }
+});
+
+showSlide(currentSlide);
+
+setInterval(nextSlide, 3000); // Schimbă automat imaginile la fiecare 3 secunde
+
+
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+menuToggle.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
