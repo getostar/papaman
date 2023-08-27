@@ -197,12 +197,12 @@ html {
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
     background-size: cover;
-}
-.popup {
-    background-color: brown;
+  }
+  .popup {
+    background-color: silver;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
-.overlay {
+  .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -210,85 +210,34 @@ html {
     height: 100%;
     background-color: rgba(0,0,0,0.5);
     z-index: 9998;
-}
-.popup img{
+  }
+  .popup img{
     padding-top: 0;
     padding-left: 0;
-    width: 500px;
+    width: 800px;
     height: 600px;
-
-}
-.popupdreapta{
-    margin-left: 14%;
-    background-color: brown;
-    display: grid;
-    max-width: 10000%;
-    max-width: 1000%;
   
-}
-.popupdreapta h2 {
-    font-family: MV Boli;
-    position: relative;
-    top: 50%;
-    left: 10%;
-    font-size: 200%;
-    
-}
-.popupdreapta numar1 {
-    position: relative;
-    padding-top: 10%;
-    top: 50%;
-    left: 30%;
-    font-size: x-large;
-}
-.popupdreapta zone1{
-    margin-top: 10%;
-    font-family: MV Boli;
-    color: darkgreen;
-
-}
-.popupdreapta numar2{
-    position: relative;
-    padding-top: 15%;
-    top: 50%;
-    left: 30%;
-    font-size: x-large;
-
-}
-.popupdreapta zone2{
-    margin-top: 10%;
-    font-family: MV Boli;
-    color: darkgreen;
-}
-.popupdreapta img{
-  width: 15%;
-  height: 100%;
-  position: absolute;
-}
-
-.popup-close {
+  }
+  .popup-close {
   position: absolute;
   top: 10px;
   right: 10px;
   font-size: 20px;
   color: #333333;
   cursor: pointer;
+  }
+@media (max-width: 1024px) and (max-height: 600px) {
+    .popup img{
+        padding-top: 0;
+        padding-left: 0;
+        width: 500px;
+        height: 400px;
+    }
+    .popup{
+        width: 500px;
+        height: 400px;
+    }
 }
-.popupdreapta {
-    position: fixed;
-    padding-top: 0;
-    top: 0;
-    left: 50%;    
-}
-.pozadelivery img {
-  width: 38%;
-  height: 35%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-
-}
-
 
 footer {
     width: 100%;
@@ -349,7 +298,7 @@ footer {
 /* Rubrigile elementelor*/
 #pizza {
     text-align: center;
-    font-size: 3em;
+    font-size: 5em;
     margin-top: 150px;
     color: goldenrod;
     font-family: MV Boli;
@@ -360,28 +309,28 @@ footer {
 
 #pizza50 {
     text-align: center;
-    font-size: 3em;
+    font-size: 5em;
     margin-top: 0;
     color: goldenrod;
     font-family: MV Boli;
 }
 #paste {
     text-align: center;
-    font-size: 3em;
+    font-size: 5em;
     margin-top: 0;
     color: goldenrod;
     font-family: MV Boli;
 }
-#burgeri {
+#meniuri {
     text-align: center;
-    font-size: 3em;
+    font-size: 5em;
     margin-top: 0;
     color: goldenrod;
     font-family: MV Boli;
 }
 #shaorma {
     text-align: center;
-    font-size: 3em;
+    font-size: 5em;
     margin-top: 0;
     color: goldenrod;
     font-family: MV Boli;
@@ -389,21 +338,21 @@ footer {
 
 #salate{
     text-align: center;
-    font-size: 3em;
+    font-size: 5em;
     margin-top: 0;
     color: goldenrod;
     font-family: MV Boli;
 }
 #deserturi{
     text-align: center;
-    font-size: 3em;
+    font-size: 5em;
     margin-top: 0;
     color: goldenrod;
     font-family: MV Boli;
 }
 #bauturi{
     text-align: center;
-    font-size: 3em;
+    font-size: 5em;
     margin-top: 0;
     color: goldenrod;
     font-family: MV Boli;
@@ -436,6 +385,8 @@ footer {
 .pizza-item h3 {
     color: black;
     font-family: MV Boli;
+    background-color: red;
+    
     
  }
  .pizza-item p{
@@ -690,7 +641,7 @@ a:hover {
     text-decoration: underline;
 }
 /* Burgeri*/
-.Burgeri {
+.Meniuri {
     margin-top: 13px;
     margin-bottom: 40px;
     margin-left: auto;
@@ -701,7 +652,7 @@ a:hover {
     grid-template-rows: repeat(2, 1fr);
     gap: 40px;
 }
-.burgeri-item {
+.meniuri-item {
     background-color: silver;
     text-align: center;
     padding: 15px;
@@ -710,21 +661,21 @@ a:hover {
     height: 350px;
       
 }
-.burgeri-item img {
+.meniuri-item img {
     transition: transform 0.3s ease-in-out;
     width: 100%;
     height: 200px;
     background-size: cover;
     background-position: center;
 }
-.burgeri-item img:hover{
+.meniuri-item img:hover{
     transform: scale(1.2);
 }
-.burgeri-item:nth-child(4) {
+.meniuri-item:nth-child(4) {
     grid-column: 2 / span 1; /* a doua coloana */
     grid-row: 1 / span 1; /* primul rand */
 }
-.burgeri-image:hover{
+.meniuri-image:hover{
     transform: scale(1.1);
     transition: all 0.2s ease-in-out;
 }
@@ -734,7 +685,7 @@ h3 {
     color: #fff;
     }
 
-.burgeri-item h3 {
+.meniuri-item h3 {
     color: black;
     font-family: MV Boli;
  }
@@ -800,6 +751,7 @@ a:hover {
     text-decoration: underline;
 }
 /*Salate*/
+/*
 .Salate {
     margin-top: 13px;
     margin-bottom: 40px;
@@ -831,8 +783,8 @@ a:hover {
     transform: scale(1.2);
 }
 .salate-item:nth-child(4) {
-    grid-column: 2 / span 1; /* a doua coloana */
-    grid-row: 1 / span 1; /* primul rand */
+    grid-column: 2 / span 1; 
+    grid-row: 1 / span 1;
 }
   
 .salate-image:hover {
@@ -858,6 +810,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
+/*
 /*Deserturi*/
 .Deserturi {
     margin-top: 13px;
@@ -867,7 +820,7 @@ a:hover {
     width: 1070px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     gap: 40px;
 }
 .deserturi-item {
@@ -888,10 +841,6 @@ a:hover {
 }
 .deserturi-item img:hover{
     transform: scale(1.2);
-}
-.deserturi-item:nth-child(4) {
-    grid-column: 2 / span 1; /* a doua coloana */
-    grid-row: 1 / span 1; /* primul rand */
 }
   
 .deserturi-image:hover {
@@ -926,7 +875,7 @@ a:hover {
     width: 1070px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 40px;
 }
 .bauturi-item {
